@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const TermsConditionsPage = () => {
   return (
@@ -86,15 +87,15 @@ const TermsConditionsPage = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-8"
         >
-          <a
-            href="/"
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold transition-colors"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             Back to Home
-          </a>
+          </Link>
         </motion.div>
       </div>
     </div>

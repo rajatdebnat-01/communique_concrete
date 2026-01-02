@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -6,13 +7,13 @@ const Navbar = () => {
 
   const logo = "/logo.jpg";
   const navLinks = [
-    { name: 'Home', href: '/#' },
-    { name: 'About', href: '/#about' },
-    { name: 'Products', href: '/#products' },
-    { name: 'Facilities', href: '/#facilities' },
-    { name: 'Quality', href: '/#quality' },
-    { name: 'Projects', href: '/#projects' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '#about' },
+    { name: 'Products', href: '#products' },
+    { name: 'Facilities', href: '#facilities' },
+    { name: 'Quality', href: '#quality' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
     { name: 'Gallery', href: '/gallery' },
   ]
 
@@ -24,20 +25,30 @@ const Navbar = () => {
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
-               <a href="#"><img src={logo} alt="Communique Concrete" className="h-17 w-auto object-contain" /></a>
+               <Link to="/"><img src={logo} alt="Communique Concrete" className="h-17 w-auto object-contain" /></Link>
               </div>
             </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                {link.name}
-              </a>
+              link.href.startsWith('/') ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={`/${link.href}`}
+                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                  {link.name}
+                </a>
+              )
             ))}
           </div>
 
@@ -67,14 +78,25 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
+              link.href.startsWith('/') ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </a>
+              )
             ))}
           </div>
         </div>

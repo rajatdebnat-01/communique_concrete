@@ -6,7 +6,7 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+
   <StrictMode>
     <Helmet>
       <title>Communique Concrete - Quality Readymix Concrete Solutions</title>
@@ -17,7 +17,9 @@ createRoot(document.getElementById('root')).render(
       <meta property="og:type" content="website" />
       <link rel="canonical" href="https://communiqueconcrete.com" />
     </Helmet>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>
-  </BrowserRouter>,
+  ,
 )
