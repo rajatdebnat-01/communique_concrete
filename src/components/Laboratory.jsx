@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
 import SectionHeader from './common/SectionHeader'
+import { Microscope, Scale, Beaker, Layers, Shapes, Droplets, CheckCircle2 } from 'lucide-react';
 
 const labEquipment = [
   {
     category: "Testing Equipment",
+    icon: Microscope,
     items: [
       "Concrete Batching Plant (1 CuM)",
       "Compression Testing Machine (3000 KN)",
@@ -14,6 +16,7 @@ const labEquipment = [
   },
   {
     category: "Measurement Tools",
+    icon: Scale,
     items: [
       "Vernier Calipers",
       "Steel Scale",
@@ -24,6 +27,7 @@ const labEquipment = [
   },
   {
     category: "Sample Preparation",
+    icon: Beaker,
     items: [
       "Cement Mortar Vibrator",
       "Cube Moulds for Concrete",
@@ -37,6 +41,7 @@ const labEquipment = [
 const testingPlans = [
   {
     material: "Cement",
+    icon: Layers,
     tests: [
       "Visual Inspection",
       "Dry Sieve Analysis",
@@ -47,6 +52,7 @@ const testingPlans = [
   },
   {
     material: "Aggregates",
+    icon: Shapes,
     tests: [
       "Sieve Analysis",
       "Moisture Content",
@@ -57,6 +63,7 @@ const testingPlans = [
   },
   {
     material: "Fresh Concrete",
+    icon: Droplets,
     tests: [
       "Slump Test",
       "Yield Test",
@@ -81,27 +88,33 @@ const Laboratory = () => {
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-gray-900 mb-8">Laboratory Equipment</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {labEquipment.map((category, index) => (
-              <motion.div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <h4 className="text-xl font-medium text-gray-900 mb-4">{category.category}</h4>
-                <ul className="space-y-3">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start">
-                      <svg className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-gray-600">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+            {labEquipment.map((category, index) => {
+              const Icon = category.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className="bg-gray-50 rounded-xl p-6 shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                      <Icon className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <h4 className="text-xl font-medium text-gray-900">{category.category}</h4>
+                  </div>
+                  <ul className="space-y-3">
+                    {category.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start">
+                        <CheckCircle2 className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-600">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
@@ -114,21 +127,27 @@ const Laboratory = () => {
         >
           <h3 className="text-2xl font-semibold text-gray-900 mb-8">Testing Capabilities</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testingPlans.map((plan, index) => (
-              <div key={index} className="space-y-4">
-                <h4 className="text-xl font-medium text-gray-900">{plan.material}</h4>
-                <ul className="space-y-3">
-                  {plan.tests.map((test, testIndex) => (
-                    <li key={testIndex} className="flex items-start">
-                      <svg className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                      </svg>
-                      <span className="text-gray-600">{test}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {testingPlans.map((plan, index) => {
+              const Icon = plan.icon;
+              return (
+                <div key={index} className="space-y-4">
+                  <div className="flex items-center mb-2">
+                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                      <Icon className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <h4 className="text-xl font-medium text-gray-900">{plan.material}</h4>
+                  </div>
+                  <ul className="space-y-3 ml-2">
+                    {plan.tests.map((test, testIndex) => (
+                      <li key={testIndex} className="flex items-start">
+                        <CheckCircle2 className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0 mt-1" />
+                        <span className="text-gray-600">{test}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
       </div>

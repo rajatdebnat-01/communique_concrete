@@ -1,49 +1,50 @@
-const teamMembers = [
-  {
-    name: 'Sandip Mukherjee',
-    image: '/images/team/sandip.jpg',
-    position: 'Managing Director',
-    description: 'An accomplished business leader with 26 years of experience in business development planning and enhancing strategies.',
-  },
-  {
-    name: 'Subhra Sarkar',
-    image: '/images/team/subhra.jpg',
-    position: 'GM – Business Head',
-    description: 'A civil engineer with 19 years of experience in the ready mix industry, starting his career with L&T concrete in Kolkata.',
-  },
-  {
-    name: 'Gauranga Paul',
-    image: '/images/team/gauranga.jpg',
-    position: 'DGM – Operation',
-    description: 'A mechanical engineer with 26 years of experience in construction and ready mix industry, specializing in plant & machinery operations.',
-  },
-  {
-    name: 'Soumik Rakshit',
-    image: '/images/team/soumik.jpg',
-    position: 'Sr. Manager - Business',
-    description: '12 years of experience in readymix concrete business, former Cluster Business Head at firstchoice readymix.',
-  },
-  {
-    name: 'Tamal Roy',
-    image: '/images/team/tamal.jpg',
-    position: 'Sr. Manager - Business',
-    description: '9 years of experience in readymix concrete business, former Cluster Business Head of Joka & Kharagpur plants.',
-  },
-  {
-    name: 'Shubhankar Ghosh',
-    image: '/images/team/shubhankar.jpg',
-    position: 'Sr. Manager - Business',
-    description: '14 years of experience in readymix concrete business, former Cluster Business Head of Khardah & Dankuni plants.',
-  },
-  {
-    name: 'Payel Banerjee',
-    image: '/images/team/payel.jpg',
-    position: 'Sr. Manager - HRD',
-    description: 'She started her career in Tantia Construction Limited (RMC Division) in 2010. Having more than 14 years of experience in readymix concrete business. She joined firstchoice readymix in 2019. She has worked as the HR Manager in eastern region at firstchoice readymix till August’2024.',
-  },
-]
+// const teamMembers = [
+//   {
+//     name: 'Sandip Mukherjee',
+//     image: '/images/team/sandip.jpg',
+//     position: 'Managing Director',
+//     description: 'An accomplished business leader with 26 years of experience in business development planning and enhancing strategies.',
+//   },
+//   {
+//     name: 'Subhra Sarkar',
+//     image: '/images/team/subhra.jpg',
+//     position: 'GM – Business Head',
+//     description: 'A civil engineer with 19 years of experience in the ready mix industry, starting his career with L&T concrete in Kolkata.',
+//   },
+//   {
+//     name: 'Gauranga Paul',
+//     image: '/images/team/gauranga.jpg',
+//     position: 'DGM – Operation',
+//     description: 'A mechanical engineer with 26 years of experience in construction and ready mix industry, specializing in plant & machinery operations.',
+//   },
+//   {
+//     name: 'Soumik Rakshit',
+//     image: '/images/team/soumik.jpg',
+//     position: 'Sr. Manager - Business',
+//     description: '12 years of experience in readymix concrete business, former Cluster Business Head at firstchoice readymix.',
+//   },
+//   {
+//     name: 'Tamal Roy',
+//     image: '/images/team/tamal.jpg',
+//     position: 'Sr. Manager - Business',
+//     description: '9 years of experience in readymix concrete business, former Cluster Business Head of Joka & Kharagpur plants.',
+//   },
+//   {
+//     name: 'Shubhankar Ghosh',
+//     image: '/images/team/shubhankar.jpg',
+//     position: 'Sr. Manager - Business',
+//     description: '14 years of experience in readymix concrete business, former Cluster Business Head of Khardah & Dankuni plants.',
+//   },
+//   {
+//     name: 'Payel Banerjee',
+//     image: '/images/team/payel.jpg',
+//     position: 'Sr. Manager - HRD',
+//     description: 'She started her career in Tantia Construction Limited (RMC Division) in 2010. Having more than 14 years of experience in readymix concrete business. She joined firstchoice readymix in 2019. She has worked as the HR Manager in eastern region at firstchoice readymix till August’2024.',
+//   },
+// ]
 
 import { motion } from 'framer-motion';
+import { Users, Award, Headset, HandHelping } from 'lucide-react';
 
 const About = () => {
   const containerVariants = {
@@ -92,20 +93,28 @@ const About = () => {
               our commitment to precision, integrity, and client satisfaction is the cornerstone of our organization.
             </p>
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white p-4 rounded-lg shadow-md">
-                <h4 className="text-blue-600 font-bold text-2xl mb-2">25+</h4>
-                <p className="text-gray-600">Years Experience</p>
+              <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+                <Users className="w-10 h-10 text-blue-600 mb-2" />
+                <h4 className="font-bold text-gray-900 mb-1">Expertise Team</h4>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md">
-                <h4 className="text-blue-600 font-bold text-2xl mb-2">500+</h4>
-                <p className="text-gray-600">Projects Completed</p>
+              <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+                <Award className="w-10 h-10 text-blue-600 mb-2" />
+                <h4 className="font-bold text-gray-900 mb-1">Consistent Quality</h4>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+                <Headset className="w-10 h-10 text-blue-600 mb-2" />
+                <h4 className="font-bold text-gray-900 mb-1">Customer Satisfaction</h4>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+                <HandHelping className="w-10 h-10 text-blue-600 mb-2" />
+                <h4 className="font-bold text-gray-900 mb-1">Specialized Concrete Solutions</h4>
               </div>
             </div>
           </motion.div>
         </motion.div>
 
         {/* Team Section */}
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -135,7 +144,7 @@ const About = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

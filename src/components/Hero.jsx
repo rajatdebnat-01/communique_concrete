@@ -58,14 +58,14 @@ const Hero = () => {
         >
           Building Tomorrow with Quality Concrete Today
         </motion.h1>
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 leading-relaxed"
         >
           A group of seasoned professionals delivering high-quality readymix concrete solutions tailored to our clients' diverse needs.
-        </motion.p>
+        </motion.p> */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

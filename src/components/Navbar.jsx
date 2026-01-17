@@ -14,7 +14,7 @@ const Navbar = () => {
     { name: 'Quality', href: '#quality' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
-    { name: 'Gallery', href: '/gallery' },
+    { name: 'Career', href: '/career' },
   ]
 
   return (
@@ -26,13 +26,10 @@ const Navbar = () => {
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
                 <Link to="/">
-                  <video
-                    src="/navVideo.mp4"
-                    className="h-auto w-25 object-cover scale-150"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                  <img
+                    src="/CC LOGO.jpg"
+                    alt="CC Logo"
+                    className="h-12 w-auto object-contain"
                   />
                 </Link>
               </div>
@@ -45,7 +42,7 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="text-gray-800 hover:text-gray-950 px-1 py-2 rounded-md text-md font-bold transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -53,12 +50,24 @@ const Navbar = () => {
                   <a
                     key={link.name}
                     href={`/${link.href}`}
-                    className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="text-gray-800 hover:text-gray-950 px-1 py-2 rounded-md text-md font-bold transition-colors"
                   >
                     {link.name}
                   </a>
                 )
               ))}
+            </div>
+
+            {/* Right Side Video */}
+            <div className="flex items-center">
+              <video
+                src="/navVideo.mp4"
+                className="h-auto w-16 md:w-25 object-cover scale-150"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
             </div>
 
             {/* Mobile menu button */}

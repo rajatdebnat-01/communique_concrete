@@ -5,8 +5,7 @@ import Gallery from './pages/Gallery';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsConditionsPage from './pages/TermsAndCondition';
 import HomePage from './pages/HomePage';
-
-
+import CareerPage from './pages/CareerPage';
 
 function App() {
   return (
@@ -17,6 +16,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/career" element={<CareerPage />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms-and-conditions" element={<TermsConditionsPage />} />

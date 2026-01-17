@@ -3,15 +3,15 @@ import { useState } from 'react';
 
 const SectionHeader = ({ badge, title, description }) => (
   <div className="text-center mb-16">
-    <motion.span 
-      className="inline-block px-4 py-1 mb-4 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full"
+    <motion.span
+      className="inline-block px-4 py-1 mb-4 text-sm font-semibold text-red-600 bg-red-100 rounded-full"
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
     >
       {badge}
     </motion.span>
-    <motion.h2 
+    <motion.h2
       className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -19,7 +19,7 @@ const SectionHeader = ({ badge, title, description }) => (
     >
       {title}
     </motion.h2>
-    <motion.p 
+    <motion.p
       className="text-lg text-gray-600 max-w-2xl mx-auto"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const projectCategories = [
   {
     title: "Government Sector",
     icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
-    color: "blue",
+    color: "red",
     projects: {
       "Healthcare": [
         "Neuroscience Institute",
@@ -70,7 +70,7 @@ const projectCategories = [
   {
     title: "Industries",
     icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z",
-    color: "purple",
+    color: "ash",
     projects: {
       "Manufacturing & Logistics": [
         "Jindal India LTD",
@@ -87,7 +87,7 @@ const projectCategories = [
   {
     title: "Real Estate Developers",
     icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
-    color: "green",
+    color: "red",
     projects: [
       "Siddha Waterfront llp",
       "Srijan Realty Pvt Ltd",
@@ -102,26 +102,19 @@ const projectCategories = [
 ];
 
 const colorSchemes = {
-  blue: {
-    bg: "from-blue-500 to-blue-700",
-    light: "bg-blue-50",
-    border: "border-blue-200",
-    text: "text-blue-600",
-    hover: "hover:border-blue-400 hover:shadow-blue-100"
+  red: {
+    bg: "from-red-600 to-red-700",
+    light: "bg-red-50",
+    border: "border-red-200",
+    text: "text-red-700",
+    hover: "hover:border-red-400 hover:shadow-red-100"
   },
-  purple: {
-    bg: "from-purple-500 to-purple-700",
-    light: "bg-purple-50",
-    border: "border-purple-200",
-    text: "text-purple-600",
-    hover: "hover:border-purple-400 hover:shadow-purple-100"
-  },
-  green: {
-    bg: "from-green-500 to-green-700",
-    light: "bg-green-50",
-    border: "border-green-200",
-    text: "text-green-600",
-    hover: "hover:border-green-400 hover:shadow-green-100"
+  ash: {
+    bg: "from-slate-600 to-slate-700",
+    light: "bg-slate-50",
+    border: "border-slate-200",
+    text: "text-slate-700",
+    hover: "hover:border-slate-400 hover:shadow-slate-100"
   }
 };
 
@@ -145,11 +138,10 @@ const Projects = () => {
               <motion.button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  activeTab === index
-                    ? `bg-gradient-to-r ${colors.bg} text-white shadow-lg scale-105`
-                    : `bg-white text-gray-700 border-2 border-gray-200 hover:border-gray-300 shadow-md`
-                }`}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === index
+                  ? `bg-gradient-to-r ${colors.bg} text-white shadow-lg scale-105`
+                  : `bg-white text-gray-700 border-2 border-gray-200 hover:border-gray-300 shadow-md`
+                  }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -292,14 +284,12 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6">
+                <div className="bg-gradient-to-r from-red-600 to-red-700 p-6">
                   <h4 className="text-xl font-bold text-white">Project Highlights</h4>
                 </div>
                 <div className="p-6 space-y-4">
                   {[
-                    { label: "Total Projects", value: "500+", color: "from-blue-500 to-blue-600", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
-                   
-                    { label: "Years Experience", value: "25+", color: "from-purple-500 to-purple-600", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" }
+                    { label: "Total Projects", value: "500+", color: "from-red-500 to-red-600", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" }
                   ].map((stat, index) => (
                     <motion.div
                       key={index}

@@ -2,42 +2,59 @@ import { Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
-  const logo = "/logo.jpg";
+  const currentYear = new Date().getFullYear();
+
+  const logo = "/CC LOGO.jpg";
   const car = "/cementcar.png";
+
   const links = {
     company: [
-      { name: 'About', href: '/#about' },
-      { name: 'Products', href: '/#products' },
-      { name: 'Projects', href: '/#projects' },
-      { name: 'Contact', href: '/#contact' },
-      { name: 'Gallery', href: '/gallery' }
+      { name: "About", href: "/#about" },
+      { name: "Products", href: "/#products" },
+      { name: "Projects", href: "/#projects" },
+      { name: "Contact", href: "/#contact" },
+      { name: "Gallery", href: "/gallery" },
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/privacy-policy' },
-      { name: 'Terms of Service', href: '/terms-and-conditions' }
+      { name: "Privacy Policy", href: "/privacy-policy" },
+      { name: "Terms of Service", href: "/terms-and-conditions" },
     ],
     social: [
-      { name: 'Facebook', href: 'https://www.facebook.com/p/Communique-Concrete-61561051752198', icon: 'facebook' },
-      
-    ]
-  }
+      {
+        name: "Facebook",
+        href: "https://www.facebook.com/p/Communique-Concrete-61561051752198",
+      },
+    ],
+  };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white relative overflow-hidden">
+      {/* ===================== TOP FOOTER ===================== */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-start mb-4 flex-col">
-              <div className="flex  items-center justify-center gap-5">
-              <img src={logo} alt="Communique Concrete" className="h-16 w-auto object-contain bg-white rounded-lg p-2" />
-              <img src={car} alt="Cement Truck" className="h-16 w-auto object-contain mt-4" />
+            <div className="flex flex-col mb-4">
+              <div className="flex items-center gap-5 mb-3">
+                <img
+                  src={logo}
+                  alt="Communique Concrete"
+                  className="h-16 w-auto object-contain bg-white rounded-lg p-2"
+                />
+                <img
+                  src={car}
+                  alt="Cement Truck"
+                  className="h-16 w-auto object-contain"
+                />
               </div>
-              <h3 className="text-2xl font-bold">Communique Concrete</h3>
+              <h3 className="text-2xl font-bold">
+                Communique Concrete
+              </h3>
             </div>
-            <p className="text-gray-400 mb-4">
-              Delivering high-quality readymix concrete solutions with precision, integrity, and excellence.
+
+            <p className="text-gray-400 max-w-xl">
+              Delivering high-quality readymix concrete solutions with precision,
+              integrity, and excellence.
             </p>
           </div>
 
@@ -75,30 +92,46 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm text-center">
-              © {currentYear} Communique Concrete. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              {links.social.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <span className="sr-only">{link.name}</span>
-                 <Facebook />
-                </a>
-              ))}
+      {/* ===================== BOTTOM CURVED DESIGN ===================== */}
+      <div className="relative w-full h-[150px] md:h-[170px] overflow-hidden">
+
+        {/* Footer Background Image */}
+        <img
+          src="/footer.png"
+          alt="Footer Design"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        />
+
+        {/* Bottom content */}
+        <div className="relative z-40 h-full flex items-end pb-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-gray-900 text-sm font-medium text-center">
+                © {currentYear} Communique Concrete. All rights reserved.
+              </p>
+
+              <div className="flex space-x-6">
+                {links.social.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-900 hover:text-black transition-colors"
+                  >
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
