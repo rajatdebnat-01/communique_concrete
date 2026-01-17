@@ -80,7 +80,7 @@ const About = () => {
         >
           <motion.div variants={itemVariants} className="relative">
             <img
-              src="/images/about/image.png"
+              src="/images/about/image2.png"
               alt="About Communique Concrete"
               className="rounded-lg shadow-2xl w-full h-[500px] object-cover"
             />

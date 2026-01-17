@@ -238,6 +238,31 @@ ${formData.message}
                         )}
                     </div>
                 </div>
+
+                {/* Contact Section */}
+                <div className="mt-12 bg-white rounded-2xl shadow-lg p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 border border-gray-100">
+                    <div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center">
+                            <span className="bg-red-100 p-2 rounded-full mr-3">
+                                <UserIcon className="w-6 h-6 text-red-600" />
+                            </span>
+                            Have Career Related Queries?
+                        </h3>
+                        <p className="text-gray-600 ml-1 mt-1 max-w-lg">
+                            If you have specific questions or need to reach out to our HR department specifically, you can email us directly.
+                        </p>
+                    </div>
+                    <a
+                        href="mailto:hrd@communiqueconcrete.com"
+                        className="flex-shrink-0 flex items-center bg-gray-900 text-white px-6 py-4 rounded-xl font-semibold hover:bg-red-600 transition-all shadow-md hover:shadow-xl group"
+                    >
+                        <EnvelopeIcon className="w-6 h-6 mr-3 text-red-500 group-hover:text-white transition-colors" />
+                        <span className="flex flex-col text-left">
+                            <span className="text-xs text-gray-400 group-hover:text-red-100 uppercase tracking-wider font-bold">Email Directly</span>
+                            <span className="text-lg">hrd@communiqueconcrete.com</span>
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     )
