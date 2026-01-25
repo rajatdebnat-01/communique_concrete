@@ -70,7 +70,7 @@ const projectCategories = [
   {
     title: "Industries",
     icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z",
-    color: "ash",
+    color: "red",
     projects: {
       "Manufacturing & Logistics": [
         "Jindal India LTD",
@@ -108,14 +108,14 @@ const colorSchemes = {
     border: "border-red-200",
     text: "text-red-700",
     hover: "hover:border-red-400 hover:shadow-red-100"
-  },
-  ash: {
-    bg: "from-slate-600 to-slate-700",
-    light: "bg-slate-50",
-    border: "border-slate-200",
-    text: "text-slate-700",
-    hover: "hover:border-slate-400 hover:shadow-slate-100"
   }
+  // ash: {
+  //   bg: "from-slate-600 to-slate-700",
+  //   light: "bg-slate-50",
+  //   border: "border-slate-200",
+  //   text: "text-slate-700",
+  //   hover: "hover:border-slate-400 hover:shadow-slate-100"
+  // }
 };
 
 const Projects = () => {
@@ -171,7 +171,7 @@ const Projects = () => {
                   </div>
                   <div>
                     <h3 className="text-3xl font-bold text-white">{projectCategories[activeTab].title}</h3>
-                    <p className="text-white/80 text-sm mt-1">Excellence in every project</p>
+                    <p className="text-white/80 text-md font-semibold mt-1">Excellence in every project</p>
                   </div>
                 </div>
               </div>
@@ -264,10 +264,8 @@ const Projects = () => {
                       src="/cementcar.png"
                       alt="Cement Mixer Truck"
                       className="w-full h-auto object-contain drop-shadow-2xl"
-                      animate={{ y: [0, -10, 0] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     />
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4/5 h-6 bg-blue-500/30 blur-2xl rounded-full"></div>
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4/5 h-6 bg-red-500/30 blur-2xl rounded-full"></div>
                   </div>
                   <div className="mt-8 text-center">
                     <h4 className="text-2xl font-bold text-white mb-2">Premium Delivery</h4>

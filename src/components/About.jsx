@@ -84,7 +84,7 @@ const About = () => {
               alt="About Communique Concrete"
               className="rounded-lg shadow-2xl w-full h-[500px] object-cover"
             />
-            <div className="absolute inset-0 bg-blue-600 opacity-10 rounded-lg"></div>
+            <div className="absolute inset-0 bg-red-600 opacity-10 rounded-lg"></div>
           </motion.div>
           <motion.div variants={itemVariants} className="text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Us</h2>
@@ -93,21 +93,21 @@ const About = () => {
               our commitment to precision, integrity, and client satisfaction is the cornerstone of our organization.
             </p>
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
-                <Users className="w-10 h-10 text-blue-600 mb-2" />
-                <h4 className="font-bold text-gray-900 mb-1">Expertise Team</h4>
+              <div className="bg-red-700 p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+                <Users className="w-10 h-10 text-white mb-2" />
+                <h4 className="font-bold text-white mb-1">Expert Team</h4>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
-                <Award className="w-10 h-10 text-blue-600 mb-2" />
-                <h4 className="font-bold text-gray-900 mb-1">Consistent Quality</h4>
+              <div className="bg-red-700 p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+                <Award className="w-10 h-10 text-white mb-2" />
+                <h4 className="font-bold text-white mb-1">Consistent Quality</h4>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
-                <Headset className="w-10 h-10 text-blue-600 mb-2" />
-                <h4 className="font-bold text-gray-900 mb-1">Customer Satisfaction</h4>
+              <div className="bg-red-700 p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+                <Headset className="w-10 h-10 text-white mb-2" />
+                <h4 className="font-bold text-white mb-1">Customer Satisfaction</h4>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
-                <HandHelping className="w-10 h-10 text-blue-600 mb-2" />
-                <h4 className="font-bold text-gray-900 mb-1">Specialized Concrete Solutions</h4>
+              <div className="bg-red-700 p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+                <HandHelping className="w-10 h-10 text-white mb-2" />
+                <h4 className="font-bold text-white mb-1">Specialized Concrete Solutions</h4>
               </div>
             </div>
           </motion.div>

@@ -28,13 +28,13 @@ Hello Communique Concrete HR Team,
 
 I am interested in applying for the position of ${formData.position}.
 
+${formData.message}
+
 My Details:
 Name: ${formData.name}
 Phone: ${formData.phone}
 Email: ${formData.email}
 
-Message:
-${formData.message}
 
 [IMPORTANT: I have attached my CV/Resume to this email]
 `.trim()

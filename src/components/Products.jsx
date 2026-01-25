@@ -136,7 +136,7 @@ const specialSolutions = [
     items: ["UltimaCrete", "HydroGuard"]
   },
   {
-    category: "Floor Slab Solution",
+    category: "Floor & Slab Solutions",
     items: ["SFRCrete", "SMScreed", "ShineTop"]
   },
   {
@@ -180,8 +180,8 @@ const Products = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center mr-3">
+                <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
               </div>
@@ -189,7 +189,7 @@ const Products = () => {
             </div>
             <ul className="space-y-2">
               <li className="flex items-center text-gray-600">
-                <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>
                 Normal Concrete up to M50 Grade
               </li>
             </ul>
@@ -205,10 +205,10 @@ const Products = () => {
               transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
             >
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                  <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
+                <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900">{solution.category}</h3>
               </div>
@@ -220,8 +220,8 @@ const Products = () => {
                     className="flex items-center group cursor-pointer"
                     onClick={() => openModal(item)}
                   >
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 group-hover:bg-blue-600 transition-colors flex-shrink-0"></span>
-                    <span className="text-gray-600 group-hover:text-blue-600 transition-colors border-b border-transparent group-hover:border-blue-600">
+                    <span className="w-2 h-2 bg-red-600 rounded-full mr-3 group-hover:bg-red-600 transition-colors flex-shrink-0"></span>
+                    <span className="text-gray-600 group-hover:text-red-600 transition-colors border-b border-transparent group-hover:border-red-600">
                       {item}
                     </span>
                   </li>
@@ -275,11 +275,11 @@ const Products = () => {
 
                       {selectedProduct.features && selectedProduct.features.length > 0 && (
                         <div className="bg-blue-50 rounded-xl p-6">
-                          <h4 className="font-semibold text-blue-900 mb-3 text-sm uppercase tracking-wider">Key Features</h4>
+                          <h4 className="font-semibold text-red-600 mb-3 text-sm uppercase tracking-wider">Key Features</h4>
                           <ul className="space-y-3">
                             {selectedProduct.features.map((feature, i) => (
-                              <li key={i} className="flex items-start text-blue-800 text-sm">
-                                <span className="mr-3 mt-1.5 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
+                              <li key={i} className="flex items-start text-red-600 text-sm">
+                                <span className="mr-3 mt-1.5 w-1.5 h-1.5 bg-red-600 rounded-full flex-shrink-0"></span>
                                 <span className="flex-1">{feature}</span>
                               </li>
                             ))}
@@ -293,7 +293,7 @@ const Products = () => {
                   <div className="bg-gray-50 px-8 py-4 border-t border-gray-100 flex justify-end shrink-0 rounded-b-2xl">
                     <button
                       onClick={closeModal}
-                      className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm"
+                      className="px-6 py-2 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors shadow-sm"
                     >
                       Close
                     </button>

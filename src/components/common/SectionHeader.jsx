@@ -15,13 +15,13 @@ const SectionHeader = ({ badge, title, description }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="w-20 h-1 bg-blue-600 mx-auto mb-2" />
-        <div className="w-10 h-1 bg-blue-600 mx-auto" />
+        <div className="w-20 h-1 bg-red-600 mx-auto mb-2" />
+        <div className="w-10 h-1 bg-red-600 mx-auto" />
       </motion.div>
 
       {/* Badge */}
       <motion.div
-        className="inline-block p-2 px-4 rounded-full bg-blue-100 text-blue-700 font-medium text-sm mb-4"
+        className="inline-block p-2 px-4 rounded-full bg-red-600 text-white font-medium text-sm mb-4"
         initial={{ scale: 0.5 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}

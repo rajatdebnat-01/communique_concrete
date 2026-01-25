@@ -63,15 +63,15 @@ const QualityControl = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                    <Icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900">{process.title}</h3>
                 </div>
                 <ul className="space-y-4">
                   {process.points.map((point, pointIndex) => (
                     <li key={pointIndex} className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-red-600 mr-2 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-600">{point}</span>
                     </li>
                   ))}
@@ -91,8 +91,8 @@ const QualityControl = () => {
           <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">Our Quality Standards</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex items-center space-x-4">
-              <div className="bg-blue-100 p-3 rounded-full">
-                <Award className="h-6 w-6 text-blue-500" />
+              <div className="bg-red-600 p-3 rounded-full">
+                <Award className="h-6 w-6 text-white" />
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">IS 4926:2003 Compliant</h4>
@@ -100,8 +100,8 @@ const QualityControl = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <div className="bg-blue-100 p-3 rounded-full">
-                <FlaskConical className="h-6 w-6 text-blue-500" />
+              <div className="bg-red-600 p-3 rounded-full">
+                <FlaskConical className="h-6 w-6 text-white" />
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">NABL Accredited Testing</h4>

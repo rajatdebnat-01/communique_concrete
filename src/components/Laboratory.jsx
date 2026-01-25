@@ -99,15 +99,15 @@ const Laboratory = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                      <Icon className="w-5 h-5 text-blue-600" />
+                    <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                      <Icon className="w-5 h-5 text-white" />
                     </div>
                     <h4 className="text-xl font-medium text-gray-900">{category.category}</h4>
                   </div>
                   <ul className="space-y-3">
                     {category.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start">
-                        <CheckCircle2 className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-red-600 mr-2 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-600">{item}</span>
                       </li>
                     ))}
@@ -132,15 +132,15 @@ const Laboratory = () => {
               return (
                 <div key={index} className="space-y-4">
                   <div className="flex items-center mb-2">
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                      <Icon className="w-5 h-5 text-blue-600" />
+                    <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                      <Icon className="w-5 h-5 text-white" />
                     </div>
                     <h4 className="text-xl font-medium text-gray-900">{plan.material}</h4>
                   </div>
                   <ul className="space-y-3 ml-2">
                     {plan.tests.map((test, testIndex) => (
                       <li key={testIndex} className="flex items-start">
-                        <CheckCircle2 className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0 mt-1" />
+                        <CheckCircle2 className="h-4 w-4 text-red-600 mr-2 flex-shrink-0 mt-1" />
                         <span className="text-gray-600">{test}</span>
                       </li>
                     ))}

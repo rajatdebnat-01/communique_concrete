@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const images = ["/images/hero/hero.jpg", "/images/hero/hero2.jpg", "/images/hero/hero3.png", "/images/hero/hero4.png"];
+  const images = ["/images/hero/hero.jpg", "/images/hero/hero2.jpg", "/images/hero/hero4.png"];
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
@@ -74,7 +74,7 @@ const Hero = () => {
         >
           <a
             href="#contact"
-            className="w-full sm:w-auto bg-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg font-medium hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="w-full sm:w-auto bg-red-600 text-white px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg font-medium hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Get Started
           </a>

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 import { MapPinIcon, PhoneIcon, EnvelopeIcon, ClockIcon } from '@heroicons/react/24/outline'
+import SectionHeader from './common/SectionHeader'
 
 /**
  * Contact component handles the contact form and displays company contact information
@@ -83,7 +84,7 @@ Email: ${formData.email}
       {/* Animated background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50">
         <motion.div
-          className="absolute top-20 left-10 w-40 h-40 md:w-64 md:h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+          className="absolute top-20 left-10 w-40 h-40 md:w-64 md:h-64 bg-red-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 30, 0],
@@ -95,7 +96,7 @@ Email: ${formData.email}
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-48 h-48 md:w-72 md:h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+          className="absolute bottom-20 right-10 w-48 h-48 md:w-72 md:h-72 bg-red-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
           animate={{
             scale: [1.2, 1, 1.2],
             x: [0, -30, 0],
@@ -109,42 +110,18 @@ Email: ${formData.email}
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <motion.div
-          className="text-center mb-12 md:mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          {/* Decorative elements */}
-          <motion.div
-            className="absolute left-1/2 -translate-x-1/2 -top-8 md:-top-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <div className="w-16 md:w-24 h-1.5 bg-blue-600 mx-auto mb-1.5 md:mb-2" />
-            <div className="w-8 md:w-12 h-1.5 bg-blue-600 mx-auto" />
-          </motion.div>
-          <motion.div
-            className="inline-block px-4 py-1.5 md:px-6 md:py-2 rounded-full bg-blue-100 text-blue-700 font-bold text-xs md:text-sm mb-4 md:mb-6"
-            initial={{ scale: 0.5 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Let's Connect
-          </motion.div>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 md:mb-6">Get in Touch With Us</h2>
-          <p className="text-sm md:text-lg font-medium text-gray-600 max-w-xl md:max-w-3xl mx-auto leading-relaxed">
-            Have questions about our concrete solutions? We're here to help! Reach out to us and our team will get back to you shortly.
-          </p>
-        </motion.div>
+        <SectionHeader
+          badge="Let's Connect"
+          title="Get in Touch With Us"
+          description="Have questions about our concrete solutions? We're here to help! Reach out to us and our team will get back to you shortly."
+        />
 
         {/* Animated connecting dots background */}
         <div className="absolute inset-0 grid grid-cols-8 gap-4 pointer-events-none opacity-10">
           {[...Array(64)].map((_, i) => (
             <motion.div
               key={i}
-              className="w-1.5 h-1.5 md:w-2 md:h-2 bg-blue-500 rounded-full"
+              className="w-1.5 h-1.5 md:w-2 md:h-2 bg-red-600 rounded-full"
               initial={{ opacity: 0.1 }}
               animate={{
                 opacity: [0.1, 0.5, 0.1],
@@ -169,16 +146,16 @@ Email: ${formData.email}
           >
             {/* Decorative corner elements */}
             <div className="absolute top-0 left-0 w-16 h-16 md:w-20 md:h-20">
-              <div className="absolute top-3 left-3 md:top-4 md:left-4 w-2 h-2 md:w-3 md:h-3 bg-blue-500 rounded-full" />
-              <div className="absolute top-3 left-6 md:top-4 md:left-10 w-2 h-2 md:w-3 md:h-3 bg-blue-400 rounded-full" />
-              <div className="absolute top-6 left-3 md:top-10 md:left-4 w-2 h-2 md:w-3 md:h-3 bg-blue-400 rounded-full" />
+              <div className="absolute top-3 left-3 md:top-4 md:left-4 w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full" />
+              <div className="absolute top-3 left-6 md:top-4 md:left-10 w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full" />
+              <div className="absolute top-6 left-3 md:top-10 md:left-4 w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full" />
             </div>
 
             <div className="mb-6 md:mb-8 p-4 md:p-6 bg-blue-50 rounded-lg md:rounded-xl border border-blue-100">
               <p className="text-gray-900 font-semibold text-sm md:text-lg mb-1 md:mb-2">Prefer to email directly?</p>
               <a
                 href="mailto:info@communiqueconcrete.com"
-                className="text-blue-700 hover:text-blue-800 font-bold text-base md:text-xl block break-all"
+                className="text-red-600 hover:text-red-700 font-bold text-base md:text-xl block break-all"
               >
                 info@communiqueconcrete.com
               </a>
@@ -267,7 +244,7 @@ Email: ${formData.email}
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 md:px-8 md:py-4 rounded-lg bg-blue-600 hover:bg-blue-700 
+                className="w-full px-6 py-3 md:px-8 md:py-4 rounded-lg bg-red-600 hover:bg-red-700 
                   text-white text-base md:text-lg font-bold shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500/50 
                   transition-all duration-300 transform hover:scale-[1.02] active:scale-95
                   flex items-center justify-center space-x-2 md:space-x-3"
@@ -288,7 +265,7 @@ Email: ${formData.email}
 
                 <div className="grid grid-cols-2 gap-4 md:gap-6">
                   <motion.a
-                    href="tel:+919474546259"
+                    href="tel:+919147381053"
                     className="flex items-center justify-center p-3 md:p-4 text-gray-700 hover:text-blue-700 bg-gray-50 rounded-lg md:rounded-xl hover:bg-blue-50 border border-gray-200 hover:border-blue-200 transition-all transform hover:scale-105 shadow-sm"
                     whileHover={{ y: -2 }}
                   >
@@ -296,7 +273,7 @@ Email: ${formData.email}
                     <span className="font-bold text-sm md:text-lg">Call Us</span>
                   </motion.a>
                   <motion.a
-                    href="https://wa.me/919474546259?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20concrete%20services.%20Please%20share%20details.%20Thank%20you."
+                    href="https://wa.me/919147381053?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20concrete%20services.%20Please%20share%20details.%20Thank%20you."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center p-3 md:p-4 text-gray-700 hover:text-green-600 bg-gray-50 rounded-lg md:rounded-xl hover:bg-green-50 border border-gray-200 hover:border-green-200 transition-all transform hover:scale-105 shadow-sm"
@@ -317,8 +294,8 @@ Email: ${formData.email}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <div className="w-12 h-1 md:w-16 md:h-1 bg-blue-200 rounded-full mb-2" />
-                <div className="w-8 h-1 md:w-10 md:h-1 bg-blue-200 rounded-full mx-auto" />
+                <div className="w-12 h-1 md:w-16 md:h-1 bg-red-200 rounded-full mb-2" />
+                <div className="w-8 h-1 md:w-10 md:h-1 bg-red-200 rounded-full mx-auto" />
               </motion.div>
             </form>
           </motion.div>
@@ -330,7 +307,7 @@ Email: ${formData.email}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-10 text-white relative overflow-hidden h-full">
+            <div className="bg-gradient-to-br from-red-600 to-red-700 rounded-xl md:rounded-2xl shadow-xl p-6 md:p-10 text-white relative overflow-hidden h-full">
               {/* Animated wave effect */}
               <motion.div
                 className="absolute inset-0 opacity-10"
@@ -355,7 +332,7 @@ Email: ${formData.email}
                 >
                   <MapPinIcon className="w-6 h-6 md:w-8 md:h-8 flex-shrink-0 mt-0.5 md:mt-1" />
                   <div>
-                    <h4 className="text-base md:text-2xl font-bold mb-1 md:mb-3 text-white">Our Locations</h4>
+                    <h4 className="text-base md:text-2xl font-bold mb-1 md:mb-3 text-white">Our Presence</h4>
                     <div className="space-y-1 md:space-y-2 text-blue-100 text-sm md:text-lg font-medium">
                       <p>West Bengal: Jalan Complex, Bagnan, Khardah</p>
                       <p>Jharkhand: Jamshedpur</p>
@@ -370,8 +347,8 @@ Email: ${formData.email}
                 >
                   <PhoneIcon className="w-6 h-6 md:w-8 md:h-8 flex-shrink-0 mt-0.5 md:mt-1" />
                   <div>
-                    <h4 className="text-base md:text-2xl font-bold mb-1 md:mb-3 text-white">Phone</h4>
-                    <p className="text-blue-100 text-sm md:text-xl font-bold tracking-wide">+91 94745 46259</p>
+                    <h4 className="text-base md:text-2xl font-bold mb-1 md:mb-3 text-white"> Phone</h4>
+                    <p className="text-blue-100 text-sm md:text-xl font-bold tracking-wide">+91 91473 81053</p>
                   </div>
                 </motion.div>
 
