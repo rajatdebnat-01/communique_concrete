@@ -13,7 +13,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-full flex items-center overflow-hidden">
+    <div id='hero' className="relative h-screen w-full flex items-center overflow-hidden">
       {/* Background image carousel */}
       <div className="absolute inset-0">
         <AnimatePresence initial={false}>

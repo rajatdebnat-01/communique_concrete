@@ -9,6 +9,7 @@ const Footer = () => {
 
   const links = {
     company: [
+      { name: "Home", href: "/" },
       { name: "About", href: "/#about" },
       { name: "Products", href: "/#products" },
       { name: "Projects", href: "/#projects" },
@@ -77,6 +78,9 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
+                    onClick={() => {
+                      if (link.href === '/') window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}

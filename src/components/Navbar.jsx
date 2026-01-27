@@ -42,6 +42,9 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.href}
+                    onClick={() => {
+                      if (link.href === '/') window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
                     className="text-gray-800 hover:text-gray-950 px-1 py-2 rounded-md text-md font-bold transition-colors"
                   >
                     {link.name}
@@ -100,8 +103,11 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.href}
+                    onClick={() => {
+                      setIsOpen(false)
+                      if (link.href === '/') window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
                     className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
-                    onClick={() => setIsOpen(false)}
                   >
                     {link.name}
                   </Link>
